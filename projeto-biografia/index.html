@@ -32,9 +32,8 @@
 
                     <ul class="navlinks">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#">Projects</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Curiosities</a></li>    
                     </ul>
                 </nav>
 
@@ -42,7 +41,7 @@
             <main id="home">
                 <div class="container">
                     <div class="hero-pic">
-                        <img src="images/heropic.png" alt="profile">
+                        <img src="images/eu2.jpg" alt="profile">
                     </div>
                     <div class="hero-text">
                         <h5>Hi I`m <span class="input"></span></h5>
@@ -64,7 +63,7 @@
             </main>
     <section id="about">
         <div class="row">
-            <h2>ABOUT</h2>
+            <h2 class="h2_about">ABOUT</h2>
             <div class="col1">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut dolore pariatur dignissimos alias, sapiente neque quae doloremque. Assumenda inventore adipisci eveniet labore. Perferendis illo nam magni praesentium perspiciatis sapiente!</p>
             </div>
@@ -76,8 +75,37 @@
             </div>
         </div>
     </section>
+
+    	 <h2 class="h2_curiosities">CURIOSITIES</h2> 
+        <section id="glass_card">
+          
+            <div class="container_card">
+                <div class="card">
+                    <div class="content_card">
+                        <h2>01</h2>
+                        <h3>Card One</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut dolore pariatur dignissimos alias, sapiente neque quae doloremque. Assumenda inventore adipisci eveniet labore. Perferendis illo nam magni praesentium perspiciatis sapiente!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content_card">
+                        <h2>02</h2>
+                        <h3>Card Two</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut dolore pariatur dignissimos alias, sapiente neque quae doloremque. Assumenda inventore adipisci eveniet labore. Perferendis illo nam magni praesentium perspiciatis sapiente!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content_card">
+                        <h2>03</h2>
+                        <h3>Card Three</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut dolore pariatur dignissimos alias, sapiente neque quae doloremque. Assumenda inventore adipisci eveniet labore. Perferendis illo nam magni praesentium perspiciatis sapiente!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <footer>
-        <p>Developed by <span>João Fernandes</span>. &copy 2023</p>
+        <p>Developed by <a href="https://www.instagram.com/joao.pzl/">João Fernandes</a>. &copy 2023</p>
     </footer>
     <!--Typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.js"></script>
@@ -93,14 +121,22 @@
 
         })
 
-
         var typed=new Typed(".input",{
             strings:["Frontend Developer", "UX Designer", "Web Developer"],
             typeSpeed: 70,
             backSpeed: 55,
             loop:true
         })
+    </script>
 
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
     </script>
 </body>
 </html>

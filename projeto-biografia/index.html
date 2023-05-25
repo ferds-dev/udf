@@ -7,53 +7,100 @@
     <title>João Fernandes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
 </head>
 <body>
     <div class="hero-header">
         <div class="wrapper">
             <header>
+                <!--
                 <div class="logo">
-                    <i class="fa-solid fa-a"></i>
-                    <div class="logo-text">João Fernandes</div>
+                    <i class="fa-solid fa-j"></i>
+                </div> 
+                -->
+                <div class="logo-text">                      
+                    João Fernandes
                 </div>
+
                 <nav>
                     <div class="togglebtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="navlinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portifolio</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                </ul>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </nav>
+
             </header>
-            <div class="container">
-                <div class="hero-pic">
-                    <img src="images/WhatsApp Image 2023-05-15 at 21.18.56.jpeg" alt="profile">
-                </div>
-                <div class="hero-text">
-                    <h5>Hi I`m <span class="">Front Developer</span></h5>
-                    <h1>João Fernandes</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum esse sapiente quam corporis eos cumque libero odit, iure eius recusandae autem quasi magni ad repellat voluptatum dolorem. Sequi, consequatur dolorem.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn active">Download CV</a>
-                        <a href="#" class="btn">Contact</a>
+            <main id="home">
+                <div class="container">
+                    <div class="hero-pic">
+                        <img src="images/heropic.png" alt="profile">
                     </div>
-                    <div class="social">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    <div class="hero-text">
+                        <h5>Hi I`m <span class="input"></span></h5>
+                        <h1>João Fernandes</h1>
+                        <p>Hi, i`m a passionate Front-End Developer based in Brasilia, Brazil &#x1F4CD </p>
+                        <div class="btn-group">
+                            <a href="#" class="btn active">Download CV</a>
+                            <a href="https://contate.me/joaofernandesdev" class="btn" target="_blank">Contact</a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/joaofernandesdev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/joao.pzl/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/ferds-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
+                        </div>
+                    </div>
+            </main>
+    <section id="about">
+        <div class="row">
+            <h2>ABOUT</h2>
+            <div class="col1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut dolore pariatur dignissimos alias, sapiente neque quae doloremque. Assumenda inventore adipisci eveniet labore. Perferendis illo nam magni praesentium perspiciatis sapiente!</p>
+            </div>
+            <div class="col2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi eveniet quia deserunt pariatur incidunt debitis sunt expedita doloribus quas, voluptas ex sed, magnam provident cum aspernatur animi ipsum accusantium?</p>
+            </div>
+            <div class="col3">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, sapiente sequi! Esse aliquam recusandae quidem, quas, vitae ipsum nostrum consectetur quae rem commodi distinctio eos corporis, expedita maxime reprehenderit labore.</p>
             </div>
         </div>
-    </div>
+    </section>
+    <footer>
+        <p>Developed by <span>João Fernandes</span>. &copy 2023</p>
+    </footer>
+    <!--Typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.js"></script>
+    <script>
+        /* creating button click show hide navbar */
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open")
+
+        })
+
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer", "UX Designer", "Web Developer"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop:true
+        })
+
+    </script>
 </body>
 </html>
